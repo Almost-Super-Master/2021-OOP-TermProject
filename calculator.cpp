@@ -1,10 +1,10 @@
-#include "Çì´õ.h"
+#include "í—¤ë”.h"
 
 int inputLength = 0;
 string inputArr[ArrSize];
 
 void splitInputArr(string s) {
-    // ¹®ÀÚ¸¦ ÇÏ³ªÇÏ³ª Àß¶óÁØ´Ù
+    // ë¬¸ìë¥¼ í•˜ë‚˜í•˜ë‚˜ ì˜ë¼ì¤€ë‹¤
     string getString = s;
     string splitString;
     string operationString;
@@ -24,7 +24,7 @@ void splitInputArr(string s) {
             setint++;
             splitString = getString.substr(i, setint);
             if (splitString == "0x") {
-                // ¾ê´Â 16 Áø¼ö
+                // ì–˜ëŠ” 16 ì§„ìˆ˜ 
                 setint = 1;
                 while (true)
                 {
@@ -43,7 +43,7 @@ void splitInputArr(string s) {
                 setint = 1;
             }
             else if (splitString == "0b") {
-                // ¾ê´Â 2 Áø¼ö
+                // ì–˜ëŠ” 2 ì§„ìˆ˜
                 setint = 1;
                 while (true)
                 {
@@ -72,7 +72,7 @@ void splitInputArr(string s) {
 
         }
         inputArr[i - continuenum] = splitString;
-        // ÇÑ¹ø ÀÚ¸¦ ¶§¸¶´Ù Ä«¿îÅÍ°¡ ¿Ã¶ó°¡¸ç Length¸¦ ++ÇØÁØ´Ù.   
+        // í•œë²ˆ ìë¥¼ ë•Œë§ˆë‹¤ ì¹´ìš´í„°ê°€ ì˜¬ë¼ê°€ë©° Lengthë¥¼ ++í•´ì¤€ë‹¤.   
         inputLength++;
     }
 }
@@ -95,7 +95,7 @@ void swap2To10(string s)
     }
 
     cout << result;
-    //    ÀÓÀÇÀÇ ¹è¿­ ¼öÁ¤ ( 2Áø¼ö 10Áø¼ö 16Áø¼ö)
+    //    ì„ì˜ì˜ ë°°ì—´ ìˆ˜ì • ( 2ì§„ìˆ˜ 10ì§„ìˆ˜ 16ì§„ìˆ˜)
 }
 
 //void swap16To10(string s)
@@ -115,7 +115,7 @@ void swap2To10(string s)
 //    result = strtol(shexa, NULL, 16);
 //
 //    cout << result;
-//    //    ÀÓÀÇÀÇ ¹è¿­ ¼öÁ¤ ( 2Áø¼ö 10Áø¼ö 16Áø¼ö)
+//    //    ì„ì˜ì˜ ë°°ì—´ ìˆ˜ì • ( 2ì§„ìˆ˜ 10ì§„ìˆ˜ 16ì§„ìˆ˜)
 //}
 
 void exceptionString(int localLength) {
@@ -132,7 +132,7 @@ void exceptionString(int localLength) {
     atcheck = atoi(s[0].c_str());
     // 5-2-1
     if (atcheck < '0' && '9' < atcheck) {
-        cout << "¿Ã¹Ù¸£Áö ¾ÊÀº ÀÔ·ÂÀÔ´Ï´Ù.5-2-1";
+        cout << "ì˜¬ë°”ë¥´ì§€ ì•Šì€ ì…ë ¥ì…ë‹ˆë‹¤.5-2-1";
     }
 
     // 5-2-2
@@ -141,7 +141,7 @@ void exceptionString(int localLength) {
         atfir = atoi(s[i].c_str());
         atSec = atoi(s[i + 1].c_str());
         if ((s[i] == "(") && (atfir != (atSec < '0' || '9' < atSec))) {
-            cout << "¿Ã¹Ù¸£Áö ¾ÊÀº ÀÔ·ÂÀÔ´Ï´Ù.5-2-2";
+            cout << "ì˜¬ë°”ë¥´ì§€ ì•Šì€ ì…ë ¥ì…ë‹ˆë‹¤.5-2-2";
             break;
         }
 
@@ -151,7 +151,7 @@ void exceptionString(int localLength) {
     for (int i = 0; i < Arrlength; ++i)
     {
         if ((s[i] == "+" || s[i] == "-" || s[i] == "*" || s[i] == "/") && (s[i + 1] == "+" || s[i + 1] == "-" || s[i + 1] == "*" || s[i + 1] == "/")) {
-            cout << "¿Ã¹Ù¸£Áö ¾ÊÀº ÀÔ·ÂÀÔ´Ï´Ù.5-3";
+            cout << "ì˜¬ë°”ë¥´ì§€ ì•Šì€ ì…ë ¥ì…ë‹ˆë‹¤.5-3";
             break;
         }
     }
@@ -167,7 +167,7 @@ void exceptionString(int localLength) {
         }
     }
     if (count != 0) {
-        cout << "¿Ã¹Ù¸£Áö ¾ÊÀº ÀÔ·ÂÀÔ´Ï´Ù.5-1";
+        cout << "ì˜¬ë°”ë¥´ì§€ ì•Šì€ ì…ë ¥ì…ë‹ˆë‹¤.5-1";
     }
     //5-5
     for (int i = 0; i < Arrlength; ++i) {
@@ -179,12 +179,12 @@ void exceptionString(int localLength) {
         else if (s[i] == "+" || s[i] == "-" || s[i] == "*" || s[i] == "/" || s[i] == "b" || s[i] == "x") {
             continue;
         }
-        // atfir¿Í atSec°¡ ÀÎÆ®ÇüÀÌ¶ó ''»èÁ¦ & ¿Ã¹Ù¸¥ °ªÀÌ ÀÔ·ÂµÇ¾î¾ß continueµÇ¹Ç·Î ºÎµîÈ£ ¹æÇâ ¼öÁ¤ ( < ¸¦ >= ·Î)
+        // atfirì™€ atSecê°€ ì¸íŠ¸í˜•ì´ë¼ ''ì‚­ì œ & ì˜¬ë°”ë¥¸ ê°’ì´ ì…ë ¥ë˜ì–´ì•¼ continueë˜ë¯€ë¡œ ë¶€ë“±í˜¸ ë°©í–¥ ìˆ˜ì • ( < ë¥¼ >= ë¡œ)
         else if (atfir >= 0 && 9 >= atSec) {
             continue;
         }
         else {
-            cout << "¿Ã¹Ù¸£Áö ¾ÊÀº ÀÔ·ÂÀÔ´Ï´Ù.5-5";
+            cout << "ì˜¬ë°”ë¥´ì§€ ì•Šì€ ì…ë ¥ì…ë‹ˆë‹¤.5-5";
             break;
         }
     }
@@ -220,7 +220,7 @@ int main()
 
     while (true)
     {
-        cout << "¼ö½ÄÀ» ÀÔ·ÂÇÏ¼¼¿ä : ";
+        cout << "ìˆ˜ì‹ì„ ì…ë ¥í•˜ì„¸ìš” : ";
         cin >> input;
         splitInputArr(input);
         exceptionString(inputLength);
